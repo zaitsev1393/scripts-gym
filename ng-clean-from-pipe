@@ -1,0 +1,14 @@
+const rgx = /((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?/;
+const link = " https://www.youtube.com/watch?v=LTqaD1BoIQM&ab_channel=videogamedunkey ";
+const YOUTUBE_VIDEO_REGEX = /((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?/;
+const IMAGE_URL_REGEX = /(https?:\/\/.*\.(?:png|jpg))/;
+
+const regexes = [YOUTUBE_VIDEO_REGEX, IMAGE_URL_REGEX];
+
+link.replace(rgx, '');
+
+function transform(value: string, regexes: RegExp[]): any {
+  return regexes.reduce((acc, curr) => acc.replace(curr, ''),value)
+}
+
+transform(link, regexes);
