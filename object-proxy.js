@@ -10,7 +10,6 @@ const handler = {
       prop,
       receiver
     });
-    console.log('is in? ', prop in target);
     
     if(!(prop in target)) {
       target[prop] = prop;
@@ -21,14 +20,4 @@ const handler = {
 
 let proxy = new Proxy(obj, handler);
 
-proxy.hello
-
-const log = (...args) => {
-  console.log(args);
-}
-
-const o = {
-  get prop() {
-
-  }
-}
+proxy
