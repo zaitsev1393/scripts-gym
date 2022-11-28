@@ -6,11 +6,3 @@ const getRandomly = (variants) => {
 
   return variants[n];
 }
-
-for(let i = 0; i < 10000; i++) {
-  getRandomly(['Harder', 'Better', 'Faster', 'Stronger']);
-}
-
-getRandomly(['Harder', 'Better', 'Faster', 'Stronger']);
-
-2 + 5
