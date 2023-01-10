@@ -1,0 +1,1 @@
+const fib = (deep, v = [1, 1]) => deep ? fib(--deep, [v[1], v[0] + v[1]]) : v[1];

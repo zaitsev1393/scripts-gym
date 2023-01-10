@@ -1,3 +1,7 @@
+
+// Put any number of arguments in and
+// iterate it infinitely with next()
+
 const customIterator = (...args) => {
   let id = 0;
   return {
